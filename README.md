@@ -8,7 +8,7 @@ Requires Node.js 0.9.6 or later.
  [this Node.js PR]: https://github.com/joyent/node/pull/3036
 
     var http = require('http');
-    var upgradeEx = require('upgradeEx');
+    var upgradeEx = require('upgrade-ex');
 
     var server = http.createServer();
     upgradeEx.addEvents(server);

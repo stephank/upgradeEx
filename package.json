@@ -1,5 +1,5 @@
 {
-  "name": "upgradeEx",
+  "name": "upgrade-ex",
   "version": "0.1.0",
   "description": "Response object for HTTP Upgrade/CONNECT",
   "main": "index.js",

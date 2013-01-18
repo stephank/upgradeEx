@@ -1,4 +1,4 @@
-## upgradeEx
+## upgradeEx [![Build Status](https://secure.travis-ci.org/stephank/upgradeEx.png)](http://travis-ci.org/stephank/upgradeEx)
 
 A stand-alone version of [this Node.js PR], this module gives you a
 `ServerResponse` in `upgrade` and `connect` events.

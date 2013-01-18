@@ -1,0 +1,23 @@
+{
+  "name": "upgradeEx",
+  "version": "0.1.0",
+  "description": "Response object for HTTP Upgrade/CONNECT",
+  "main": "index.js",
+  "scripts": {
+    "test": "./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephank/upgradeEx.git"
+  },
+  "keywords": [
+    "http",
+    "upgrade",
+    "connect"
+  ],
+  "engines": {
+    "node": ">=0.9.6"
+  },
+  "author": "Stéphan Kochen <stephan@kochen.nl>",
+  "license": "MIT"
+}

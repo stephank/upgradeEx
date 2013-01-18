@@ -45,7 +45,7 @@ server.listen(PORT, HOST, function() {
 
     sock.setEncoding('utf-8');
     if (head.length) {
-        sock.push(head);
+      sock.push(head);
     }
 
     var data = '';

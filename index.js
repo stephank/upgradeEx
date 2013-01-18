@@ -2,12 +2,12 @@ var http = require('http');
 
 // Add `upgradeEx` and `connectEx` events to a server.
 exports.addEvents = function(server) {
-    server.on('upgrade', exports.wrap(function(req, res) {
-        server.emit('upgradeEx', req, res);
-    }));
-    server.on('connect', exports.wrap(function(req, res) {
-        server.emit('connectEx', req, res);
-    }));
+  server.on('upgrade', exports.wrap(function(req, res) {
+    server.emit('upgradeEx', req, res);
+  }));
+  server.on('connect', exports.wrap(function(req, res) {
+    server.emit('connectEx', req, res);
+  }));
 };
 
 // Wrap a new-style upgrade/connect callback with an old-style signature.

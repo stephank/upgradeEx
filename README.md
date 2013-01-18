@@ -3,8 +3,6 @@
 A stand-alone version of [this Node.js PR], this module gives you a
 `ServerResponse` in `upgrade` and `connect` events.
 
-Requires Node.js 0.9.6 or later.
-
  [this Node.js PR]: https://github.com/joyent/node/pull/3036
 
     var http = require('http');

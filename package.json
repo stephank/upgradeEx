@@ -15,9 +15,6 @@
     "upgrade",
     "connect"
   ],
-  "engines": {
-    "node": ">=0.9.6"
-  },
   "author": "Stéphan Kochen <stephan@kochen.nl>",
   "license": "MIT"
 }

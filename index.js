@@ -43,11 +43,16 @@ exports.wrap = function(callback) {
         }
 
         // Push the body part already received back in the socket buffer.
-        if (head.length) {
+        if (sock.push && head.length) {
           sock.push(head);
         }
 
         switchCb(sock);
+
+        // Old-style streams compatibility.
+        if (!sock.push && head.length) {
+            sock.emit('data', head);
+        }
       });
     }
     // Now run the new-style callback.

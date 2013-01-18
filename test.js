@@ -19,10 +19,12 @@ server.on('upgradeEx', function(req, res) {
   res.writeHead(101, UPGRADE_HEADERS);
   res.switchProtocols(function(sock) {
 
-    sock.on('readable', function() {
-      var chunk = sock.read();
+    // Use old-style streams here,
+    // so we can test on both 0.8 and 0.9.
+    sock.on('data', function(chunk) {
       sock.write(chunk);
     });
+
     sock.on('end', function() {
       sock.end();
     });
@@ -40,6 +42,7 @@ server.listen(PORT, HOST, function() {
     throw new Error("Expected upgrade, got: " + res.statusCode);
   });
   req.on('upgrade', function(res, sock, head) {
+
     console.log("Client got upgrade response");
     server.close();
 
@@ -49,10 +52,10 @@ server.listen(PORT, HOST, function() {
     }
 
     var data = '';
-    sock.on('readable', function() {
-      var chunk = sock.read();
+    sock.on('data', function(chunk) {
       data += chunk;
     });
+
     sock.on('end', function() {
       if (data === TEST_STRING)
         console.log("Client got matching echo");
